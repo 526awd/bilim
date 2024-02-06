@@ -20,7 +20,6 @@ def qr():
     f.write(jpgg.content)
     f.close()
     print(j['data']["url"])
-    print
 
     while True:
         sq=requests.get('https://passport.bilibili.com/x/passport-login/web/qrcode/poll',params=vep,headers=h)
@@ -29,7 +28,6 @@ def qr():
         if sqqj['data']['code']==0:
             print('完成')
             return sq.cookies
-            break
         else :
             print(sqqj['data']['code'])
             time.sleep(2.5)
